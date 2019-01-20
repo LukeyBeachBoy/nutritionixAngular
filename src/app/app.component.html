@@ -1,27 +1,42 @@
 <div class="container-fluid">
   <div class="header d-flex flex-row">
-    <img class="img-fluid" src="https://via.placeholder.com/50" alt="">
+    <img
+      class="img-fluid"
+      src="http://nutritioninmotion.com/wp-content/uploads/2017/08/nutrition_icon.png"
+      alt=""
+    />
     <h1 class="display-1">Nutritionix Testing Suite</h1>
   </div>
   <form (submit)="onSubmitForm(form)" #form="ngForm">
-    <input class="form-control" name="recipe" type="text" [(ngModel)]="recipeInput">
+    <input
+      class="form-control"
+      name="recipe"
+      type="text"
+      [(ngModel)]="recipeInput"
+    />
     <button class="btn btn-primary">Submit</button>
   </form>
-  <div class="results">
-    <h4></h4>
-    <img src="" alt="">
-    <p>Calories:</p>
-    <span id="calories"></span>
+  <div
+    [ngClass]="{ hidden: name != '' }"
+    class="results text-center"
+    id="results"
+  >
+    <h4>{{ name }}</h4>
+    <img [src]="image" class="img-fluid" alt="" />
+    <div id="cals" class="d-flex flex-row justify-content-center">
+      <p>Calories: <br /></p>
+      <span id="calories">{{ nf_calories }}</span>
+    </div>
     <div class="macros list-group">
       <ul id="macroCategories">
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
+        <li class="list-group-item">Carbs</li>
+        <li class="list-group-item">Protein</li>
+        <li class="list-group-item">Fat</li>
       </ul>
       <ul id="macroResults">
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
+        <li class="list-group-item">{{ nf_total_carbohydrate }}</li>
+        <li class="list-group-item">{{ nf_protein }}</li>
+        <li class="list-group-item">{{ nf_total_fat }}</li>
       </ul>
     </div>
   </div>
