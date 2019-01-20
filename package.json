@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "postinstall": "ng build--env=prod",
+    "postinstall": "ng build --env=prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
