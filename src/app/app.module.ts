@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NutritionixServiceService } from './nutritionix-service.service';
+import { FoodComponent } from './food/food.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FoodComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [NutritionixServiceService],
   bootstrap: [AppComponent]

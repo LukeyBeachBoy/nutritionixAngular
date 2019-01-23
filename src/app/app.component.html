@@ -17,28 +17,7 @@
     <button class="btn btn-primary">Submit</button>
   </form>
 
-  <div
-    [ngClass]="{ hidden: name != '' }"
-    class="results text-center"
-    id="results"
-  >
-    <h4>{{ name }}</h4>
-    <img [src]="image" class="img-fluid" alt="" />
-    <div id="cals" class="d-flex flex-row justify-content-center">
-      <p>Calories: <br /></p>
-      <span id="calories">{{ nf_calories }}</span>
-    </div>
-    <div class="macros list-group">
-      <ul id="macroCategories">
-        <li class="list-group-item">Carbs</li>
-        <li class="list-group-item">Protein</li>
-        <li class="list-group-item">Fat</li>
-      </ul>
-      <ul id="macroResults">
-        <li class="list-group-item">{{ nf_total_carbohydrate }}</li>
-        <li class="list-group-item">{{ nf_protein }}</li>
-        <li class="list-group-item">{{ nf_total_fat }}</li>
-      </ul>
-    </div>
+  <div class="results" id="results">
+    <app-food *ngFor="let food of foods" [food]="food"></app-food>
   </div>
 </div>
