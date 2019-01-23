@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularTest": {
+    "nutritionixAngular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularTest",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -59,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angularTest:build"
+            "browserTarget": "nutritionixAngular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularTest:build:production"
+              "browserTarget": "nutritionixAngular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularTest:build"
+            "browserTarget": "nutritionixAngular:build"
           }
         },
         "test": {
@@ -94,7 +94,7 @@
         }
       }
     },
-    "angularTest-e2e": {
+    "nutritionixAngular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularTest:serve"
+            "devServerTarget": "nutritionixAngular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularTest:serve:production"
+              "devServerTarget": "nutritionixAngular:serve:production"
             }
           }
         },
@@ -121,5 +121,5 @@
       }
     }
   },
-  "defaultProject": "angularTest"
+  "defaultProject": "nutritionixAngular"
 }
